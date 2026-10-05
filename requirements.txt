@@ -5,3 +5,7 @@ scipy
 torch
 pytest
 pytest>=8.0.0
+- name: Install dependencies
+  run: |
+    pip install -r requirements.txt
+    pip install pulse  # or the correct package name
