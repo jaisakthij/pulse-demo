@@ -13,6 +13,11 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.14'
+    - name: Checkout LongitudinalGeneration dependency
+      uses: actions/checkout@v4
+      with:
+        repository: <owner>/LongitudinalGeneration  # Replace with actual repo
+        path: LongitudinalGeneration
     - name: Install dependencies
       run: pip install -r requirements.txt
     - name: Run tests
