@@ -3,4 +3,4 @@ numpy
 pandas
 scipy
 torch
-pytest
+pytest>=8.0.0
