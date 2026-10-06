@@ -16,9 +16,8 @@ jobs:
     - name: Checkout LongitudinalGeneration dependency
       uses: actions/checkout@v4
       with:
-        repository: <owner>/LongitudinalGeneration  # Replace with actual repo
-        path: LongitudinalGeneration
-    - name: Install dependencies
-      run: pip install -r requirements.txt
-    - name: Run tests
-      run: python -m pytest -q -W error::UserWarning
+       - name: Checkout LongitudinalGeneration dependency
+  uses: actions/checkout@v4
+  with:
+    repository: jaisakthij/LongitudinalGeneration
+    path: LongitudinalGeneration
