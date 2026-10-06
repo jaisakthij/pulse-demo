@@ -1,4 +1,5 @@
-name: CI
+permissions:
+  contents: read   # needed for actions/checkout to fetch the repo
 on:
   push:
     branches: [ main ]
