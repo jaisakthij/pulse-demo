@@ -16,8 +16,8 @@ jobs:
     - name: Checkout LongitudinalGeneration dependency
       uses: actions/checkout@v4
       with:
-       - name: Checkout LongitudinalGeneration dependency
+     - name: Checkout LongitudinalGeneration dependency
   uses: actions/checkout@v4
   with:
-    repository: jaisakthij/LongitudinalGeneration
+    repository: jaisakthij/LongitudinalGeneration  # Replace 'actual-owner' with the real username/org
     path: LongitudinalGeneration
