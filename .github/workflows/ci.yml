@@ -10,20 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        # The repository already contains LongitudinalGeneration; no extra checkout is needed.
+        # If you ever need to pull it as a submodule, uncomment the lines below:
+        # - name: Checkout submodule
+        #   run: git submodule update --init --recursive
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.14'
-
-      - name: Checkout LongitudinalGeneration dependency
-        uses: actions/checkout@v4
-        with:
-          repository: jaisakthij/LongitudinalGeneration
-          path: LongitudinalGeneration
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run tests
         run: python -m pytest -q -W error::UserWarning
