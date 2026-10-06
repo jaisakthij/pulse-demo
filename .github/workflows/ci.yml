@@ -8,7 +8,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout pulse-demo repository
+      uses: actions/checkout@v4
+      with:
+        repository: jaisakthij/pulse-demo
+        path: pulse-demo
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -16,8 +20,5 @@ jobs:
     - name: Checkout LongitudinalGeneration dependency
       uses: actions/checkout@v4
       with:
-  - name: Checkout LongitudinalGeneration dependency
-  uses: actions/checkout@v4
-  with:
-    repository: jaisakthij/LongitudinalGeneration
-    path: LongitudinalGeneration
+        repository: jaisakthij/LongitudinalGeneration
+        path: LongitudinalGeneration
